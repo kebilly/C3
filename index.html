@@ -8,6 +8,10 @@
 <script src="c3.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">
+$(document).ready(function(){
+    $("button").onclick(function(){
+    $("<p>").append("<div id='chart'></div>");
+  
 var chart = c3.generate({
     data: {
         type: 'bar',
@@ -65,14 +69,14 @@ var chart = c3.generate({
         }
     }
 });
+
+});
+});
 </script>
 
-<script type="text/javascript">
-$(document).ready(function(){
-  $("button").onclick(function(){
-    $("<p>").append("<div id='chart'></div>");
-  });
-});
+
+
+  
 </script>
 </head>
 <body>
