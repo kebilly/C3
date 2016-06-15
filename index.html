@@ -6,13 +6,6 @@
 <script src="d3.v3.min.js" type="text/javascript"></script>
 <script src="c3.min.js" type="text/javascript"></script>
 
-</head>
-<body>
-<b>2015年高雄市</b>(橫軸:蔬果種類 / 縱軸:產量)<br/><br/>
-<a href="#" onclick="myFc()">open</a>
-<p></p>
-<!-- Load d3.js and c3.js -->
- 
 <script type="text/javascript">
 var chart = c3.generate({
     data: {
@@ -71,9 +64,20 @@ var chart = c3.generate({
         }
     }
 });
-function myFc(){
-    $("p").append("<div id='chart'></div>");
-}
 </script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").append("<div id='chart'></div>");
+  });
+});
+</script>
+</head>
+<body>
+<b>2015年高雄市</b>(橫軸:蔬果種類 / 縱軸:產量)<br/><br/>
+<button>open</button>
+<p></p>
+
+ 
 </body>
 </html>
